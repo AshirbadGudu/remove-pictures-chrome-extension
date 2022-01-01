@@ -1,9 +1,7 @@
-console.log("Running background.js");
-
-// Add onclick event to the browser action
+// Add onclick event to the browser action icon
 chrome.browserAction.onClicked.addListener((tab) => {
-  // Send a message to the active tab
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { message: "clicked_browser_action" });
+  // Send a message to the active tab of the current window
+  chrome.tabs.sendMessage(tab.id, {
+    message: "Hide All The Images Of The Page",
   });
 });
