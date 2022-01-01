@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "demo-ext",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ]
+}
