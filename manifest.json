@@ -7,5 +7,8 @@
       "matches": ["http://*/*", "https://*/*"],
       "js": ["scripts/content.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["scripts/background.js"]
+  }
 }
